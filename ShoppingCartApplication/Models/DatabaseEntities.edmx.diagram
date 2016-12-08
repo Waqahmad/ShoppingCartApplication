@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="23b04c7d64d64ad591ba814189d0aca8" Name="Diagram1">
+        <EntityTypeShape EntityType="ShopingCartDBModel.AccountReceivable" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShopingCartDBModel.Category" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShopingCartDBModel.Customer" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShopingCartDBModel.Product" Width="1.5" PointX="10.25" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShopingCartDBModel.Purchase" Width="1.5" PointX="5.75" PointY="0.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShopingCartDBModel.Sale" Width="1.5" PointX="2.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShopingCartDBModel.Stock" Width="1.5" PointX="8" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShopingCartDBModel.Vendor" Width="1.5" PointX="5.25" PointY="4.875" IsExpanded="true" />
+        <AssociationConnector Association="ShopingCartDBModel.FK_Product_Category" />
+        <AssociationConnector Association="ShopingCartDBModel.FK_Product_Vendor" />
+        <AssociationConnector Association="ShopingCartDBModel.FK_Purchase_Product" />
+        <AssociationConnector Association="ShopingCartDBModel.FK_Purchase_Vendor" />
+        <AssociationConnector Association="ShopingCartDBModel.FK_Sale_Customer" />
+        <AssociationConnector Association="ShopingCartDBModel.FK_Sale_Product" />
+        <EntityTypeShape EntityType="ShopingCartDBModel.Employee" Width="1.5" PointX="7.625" PointY="8.125" />
+        <AssociationConnector Association="ShopingCartDBModel.FK_Sale_Employee" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

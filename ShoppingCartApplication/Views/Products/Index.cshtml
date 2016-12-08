@@ -1,0 +1,102 @@
+﻿@model IEnumerable<ShoppingCartApplication.Models.Product>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProductNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Color)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StockLevel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StandardCost)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SalePrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProductImage)
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.CreatedBy)*@
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.CreatedOn)*@
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.Category.Name)*@
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.Vendor.Name)*@
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Color)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StockLevel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StandardCost)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SalePrice)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.ProductImage)*@
+            
+            <img src="@Url.Content("~/Images/Product/" + item.ProductImage)" width="70" height="70">
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.CreatedBy)*@
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.CreatedOn)*@
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.Category.Name)*@
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.Vendor.Name)*@
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

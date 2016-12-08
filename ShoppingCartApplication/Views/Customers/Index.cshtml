@@ -1,0 +1,28 @@
+﻿@model IEnumerable<ShoppingCartApplication.Models.Customer>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<div class="row">
+
+    @foreach (var item in Model)
+    {
+        <div class="col-sm-3 col-md-3 col-lg-3">
+            <h3>@Html.DisplayFor(modelItem => item.Name)</h3>
+            <div> <img src="@Url.Content("~/Images/Customer/"+item.Picture)" width="100" height="100" /></div>
+            <p><span style="font-weight:bold">Address:</span>@Html.DisplayFor(modelItem => item.Address) </p>
+            <p><span style="font-weight:bold">Contact #</span> @Html.DisplayFor(modelItem => item.ContactNo)</p>
+            <p><span style="font-weight:bold">Email #</span> @Html.DisplayFor(modelItem => item.Email)</p>
+            <div>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ID }) | @Html.ActionLink("Details", "Details", new { id = item.ID }) | @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+            </div>
+        </div>
+    }
+
+</div>
