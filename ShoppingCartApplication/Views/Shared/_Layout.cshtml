@@ -28,6 +28,7 @@
                     <li> @Html.ActionLink("Product", "Index", "Products", new { area = "" }, new { @class = "navbar" })</li>
                     <li> @Html.ActionLink("Purchase", "Index", "Purchases", new { area = "" }, new { @class = "navbar" })</li>
                     <li> @Html.ActionLink("Sale", "Index", "Sales", new { area = "" }, new { @class = "navbar" })</li>
+                    
                 </ul>
             </div>
         </div>
@@ -35,6 +36,7 @@
 
     <div class="container body-content">
         @RenderBody()
+        @RenderSection("scripts", required: false)
         <hr />
         <footer>
             <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
